@@ -1,0 +1,7 @@
+stages:
+  - validate
+lint-requirements:
+  stage: validate
+  image: python:3.11-slim
+  script:
+    - python scripts/check_vague_words.py docs/sample.md
